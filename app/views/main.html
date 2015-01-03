@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <h1>Movie Mania!</h1>
+  <p class="lead">
+    Awesome movie listing app.
+  </p>
+</div>
+
+<div class="row col-xs-8">
+  <h4>Movies</h4>
+  <ul>
+    <li class="movie" ng-repeat="movie in movies">
+      <a ng-href="#/movie/{{$index}}">
+        <img ng-src="{{movie.image}}" class="left">
+        <p class="title" ng-bind="movie.title"></p>
+        <p class="description" ng-bind="movie.description"></p>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="row col-xs-4">
+  <i class="glyphicon glyphicon-expand" ng-class="{'glyphicon-collapse-down': showForm}" ng-click="toggleForm()"></i>
+  <div ng-show="showForm">
+    <h4>Add</h4>
+    Title: <input ng-model="newMovie.title">
+    Image: <input ng-model="newMovie.image">
+    Description: <textarea ng-model="newMovie.description"></textarea>
+    <p class="btn btn-sm btn-success" ng-click="addMovie()">Add!<span class="glyphicon glyphicon-plus"></span></p>
+  </div>
+</div>
+
