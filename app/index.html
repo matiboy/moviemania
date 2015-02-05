@@ -29,17 +29,17 @@
         <h3 class="text-muted">Movie Mania</h3>
       </div>
 
-      <div ng-controller="MainCtrl">
+      <div ng-controller="MainCtrl" style="border: solid 1px red; padding: 10px;">
+        <div ng-controller="TopPartCtrl" style="border: solid 1px blue;">
+          There are currently {{movies.length}} movies (this information comes from parent controller)<br>
+          More information: {{moreInfo}} (this comes from child controller)
+        </div>
         <div ng-repeat="movie in movies">
           <h3 ng-bind="movie.title"></h3>
           <p ng-bind="movie.description"></p>
         </div>
+      </div>
 
-      </div>
-      <div ng-controller="FormCtrl" style="border: solid 1px orange;">
-        <h4>Put the form HTML here, and let FormCtrl handle it.</h4>
-        {{ formName }}
-      </div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from the Packt team</p>

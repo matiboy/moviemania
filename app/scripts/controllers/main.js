@@ -24,6 +24,6 @@ angular.module('moviemaniaApp')
   });
 
 angular.module('moviemaniaApp')
-  .controller('FormCtrl', function($scope){
-    $scope.formName = 'Adding movies';
+  .controller('TopPartCtrl', function($scope){
+    $scope.moreInfo = 'Some text';
   });
