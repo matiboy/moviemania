@@ -21,6 +21,7 @@ angular.module('moviemaniaApp')
     }];
 
     $scope.movies = movieList;
+    $scope.invalidBinding = 'I WILL NOT APPEAR ON THE PAGE...';
   });
 
 angular.module('moviemaniaApp')
