@@ -30,6 +30,10 @@
       </div>
 
       <div ng-controller="MainCtrl">
+        <div ng-repeat="movie in movies">
+          <h3 ng-bind="movie.title"></h3>
+          <p ng-bind="movie.description"></p>
+        </div>
       </div>
 
       <div class="footer">
