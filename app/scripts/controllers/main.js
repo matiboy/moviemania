@@ -15,6 +15,5 @@ angular.module('moviemaniaApp')
       description: 'A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which begin when five criminals meet at a seemingly random police lineup.'
     };
 
-    $scope.movieTitle = movie.title;
-    $scope.movieDescription = movie.description;
+    $scope.movie = movie;
   });
