@@ -30,10 +30,6 @@
       </div>
       This is outside so the binding will not be showing: {{invalidBinding}} .....
       <div ng-controller="MainCtrl" style="border: solid 1px red; padding: 10px;">
-        <div ng-controller="TopPartCtrl">
-          There are currently {{movies.length}} movies (this information comes from parent controller)<br>
-          More information: {{moreInfo}} (this comes from child controller)
-        </div>
         <div ng-repeat="movie in movies">
           <h3 ng-bind="movie.title"></h3>
           <p ng-bind="movie.description"></p>
