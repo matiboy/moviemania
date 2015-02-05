@@ -22,3 +22,8 @@ angular.module('moviemaniaApp')
 
     $scope.movies = movieList;
   });
+
+angular.module('moviemaniaApp')
+  .controller('FormCtrl', function($scope){
+    $scope.formName = 'Adding movies';
+  });
