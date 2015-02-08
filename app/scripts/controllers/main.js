@@ -23,4 +23,40 @@ angular.module('moviemaniaApp')
     }];
 
     $scope.movies = movieList;
+
+    $scope.newMovieTitle = '';
+    $scope.newMovieDescription = '';
+    $scope.newMovieCategory = '';
+    $scope.newMovieImage = 'http://www.clipartbest.com/cliparts/LTK/dy5/LTKdy59jc.png';
+
+    $scope.validateTitle = function() {
+      console.debug($scope.newMovieTitle);
+      if($scope.newMovieTitle.length === 0) {
+        window.alert('Title is required');
+      }
+    };
+
+    $scope.addMovie = function() {
+      var movie = {
+        title: $scope.newMovieTitle,
+        description: $scope.newMovieDescription,
+        image: $scope.newMovieImage,
+        category: $scope.newMovieCategory,
+      };
+      $scope.movies.push(movie);
+    };
+
+    $scope.checkCategorySelected = function() {
+      if(!$scope.newMovieCategory) {
+        window.alert('Please select a category');
+      }
+    };
+
+    $scope.checkDescription = function() {
+      console.debug($scope.newMovieDescription);
+      if($scope.newMovieDescription.length === 0) {
+        window.alert('Description is required');
+      }
+    };
+
   });
