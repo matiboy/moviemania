@@ -42,11 +42,11 @@
           <h2>Add</h2>
           <div class="form-group">
             <label>Title</label>
-            <input class="form-control" placeholder="Enter title">
+            <input class="form-control" placeholder="Enter title" ng-model="newMovieTitle" ng-keyup="validateTitle()">
           </div>
           <div class="form-group">
             <label>Image</label>
-            <input class="form-control" placeholder="Image">
+            <input class="form-control" placeholder="Image" ng-model="newMovieImage">
             <div>
               <h4>Preview</h4>
               <img ng-src="{{newMovieImage}}">
@@ -54,7 +54,7 @@
           </div>
           <div class="form-group">
             <label>Category</label>
-            <select class="form-control">
+            <select class="form-control" ng-model="newMovieCategory" ng-change="checkCategorySelected()">
               <option value="">-</option>
               <option value="Epic">Epic</option>
               <option value="Awesome">Awesome</option>
@@ -63,9 +63,9 @@
           </div>
           <div class="form-group">
             <label>Description</label>
-            <textarea class="form-control"></textarea>
+            <textarea class="form-control" ng-model="newMovieDescription" ng-blur="checkDescription()"></textarea>
           </div>
-          <button class="btn btn-info">Add</button>
+          <button class="btn btn-info" ng-click="addMovie()">Add</button>
         </div>
       </div>
 
