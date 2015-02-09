@@ -32,7 +32,6 @@ angular.module('moviemaniaApp')
     };
 
     $scope.validateTitle = function() {
-      console.debug($scope.movie.title);
       if($scope.movie.title.length === 0) {
         window.alert('Title is required');
       }
@@ -49,10 +48,21 @@ angular.module('moviemaniaApp')
     };
 
     $scope.checkDescription = function() {
-      console.debug($scope.movie.description);
       if($scope.movie.description.length === 0) {
         window.alert('Description is required');
       }
+    };
+
+    $scope.openForm = function() {
+      $scope.closed = false;
+    };
+
+    $scope.closeForm = function() {
+      $scope.closed = true;
+    };
+
+    $scope.isValid = function() {
+      return $scope.movie.title && $scope.movie.category && $scope.movie.description;
     };
 
   });
