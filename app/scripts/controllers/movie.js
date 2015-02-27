@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('moviemaniaApp')
-  .controller('MovieCtrl', function ($scope) {
+  .controller('MovieCtrl', function ($scope, $routeParams) {
+    var id = parseInt($routeParams.id, 10);
     var movieList = [{
       id: 23,
       title: 'Usual Suspects',
@@ -25,4 +26,11 @@ angular.module('moviemaniaApp')
         'Luke Skywalker: Mark Hamill'
       ]
     }];
+
+    for(var index in movieList) {
+      var movie = movieList[index];
+      if(movie.id === id) {
+        $scope.movie = movie;
+      }
+    }
   });
