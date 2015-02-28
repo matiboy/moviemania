@@ -8,7 +8,7 @@
  * Controller of the moviemaniaApp
  */
 angular.module('moviemaniaApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $location) {
     var movieList = [{
       id: 23,
       title: 'Usual Suspects',
@@ -41,6 +41,13 @@ angular.module('moviemaniaApp')
       description: '',
       category: '',
       image: 'http://www.clipartbest.com/cliparts/LTK/dy5/LTKdy59jc.png'
+    };
+
+    $scope.goToRandomMovie = function() {
+      var rand = Math.floor(Math.random() * movieList.length);
+      var randomMovie = movieList[rand];
+      var path = '/movie/'+randomMovie.id + '/' + randomMovie.slug;
+      $location.url(path);
     };
 
     $scope.validateTitle = function() {
