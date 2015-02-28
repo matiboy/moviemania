@@ -33,8 +33,8 @@ angular.module('moviemaniaApp')
       description: "An ordinary Lego construction worker, thought to be the prophesied 'Special', is recruited to join a quest to stop an evil tyrant from gluing the Lego universe into eternal stasis.",
       category: 'Awesome',
       cast: [
-        'Emmet Brickowoski': 'Chris Pratt',
-        'Lucy': 'Elizabeth Banks'
+        'Emmet Brickowoski: Chris Pratt',
+        'Lucy: Elizabeth Banks'
       ]
     }];
 
