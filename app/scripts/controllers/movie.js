@@ -25,6 +25,17 @@ angular.module('moviemaniaApp')
         'Han Solo: Harrison Ford',
         'Luke Skywalker: Mark Hamill'
       ]
+    },
+    {
+      id: 1,
+      title: 'The Lego Movie',
+      image: 'http://ia.media-imdb.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX214_AL_.jpg',
+      description: "An ordinary Lego construction worker, thought to be the prophesied 'Special', is recruited to join a quest to stop an evil tyrant from gluing the Lego universe into eternal stasis.",
+      category: 'Awesome',
+      cast: [
+        'Emmet Brickowoski': 'Chris Pratt',
+        'Lucy': 'Elizabeth Banks'
+      ]
     }];
 
     for(var index in movieList) {
