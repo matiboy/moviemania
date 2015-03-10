@@ -17,8 +17,6 @@ angular.module('moviemaniaApp')
     };
 
     $scope.goToRandomMovie = function() {
-      var rand = Math.floor(Math.random() * movieList.length);
-      var randomMovie = movieList[rand];
       var rand = Math.floor(Math.random() * $scope.movies.length);
       var randomMovie = $scope.movies[rand];
       var path = '/movie/'+randomMovie.id + '/' + randomMovie.slug;
