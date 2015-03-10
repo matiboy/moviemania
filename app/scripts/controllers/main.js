@@ -9,7 +9,6 @@
  */
 angular.module('moviemaniaApp')
   .controller('MainCtrl', function ($scope, $location) {
-    var movieList;
     $scope.movie = {
       title: '',
       description: '',
@@ -20,6 +19,8 @@ angular.module('moviemaniaApp')
     $scope.goToRandomMovie = function() {
       var rand = Math.floor(Math.random() * movieList.length);
       var randomMovie = movieList[rand];
+      var rand = Math.floor(Math.random() * $scope.movies.length);
+      var randomMovie = $scope.movies[rand];
       var path = '/movie/'+randomMovie.id + '/' + randomMovie.slug;
       $location.url(path);
     };
