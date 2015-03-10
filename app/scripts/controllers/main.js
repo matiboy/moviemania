@@ -8,7 +8,13 @@
  * Controller of the moviemaniaApp
  */
 angular.module('moviemaniaApp')
-  .controller('MainCtrl', function ($scope, $location) {
+  .controller('MainCtrl', function ($scope, $location, $http) {
+    $http.get('/movies.json').success(function(data) {
+      data.sort(function(a,b){
+        return a.title.toLowerCase() > b.title.toLowerCase();
+      });
+      $scope.movies = data;
+    });
     $scope.movie = {
       title: '',
       description: '',
