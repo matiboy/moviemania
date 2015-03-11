@@ -9,7 +9,7 @@
  */
 angular.module('moviemaniaApp')
   .controller('MainCtrl', function ($scope, $location, $http) {
-    $http.get('/moviess.json').success(function receivedMovies(data, status, headers, config) {
+    $http.get('/movies.json').success(function receivedMovies(data, status, headers, config) {
       data.sort(function(a,b){
         return a.title.toLowerCase() > b.title.toLowerCase();
       });
