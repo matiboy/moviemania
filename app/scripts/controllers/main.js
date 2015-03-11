@@ -9,11 +9,18 @@
  */
 angular.module('moviemaniaApp')
   .controller('MainCtrl', function ($scope, $location, $http) {
-    $http.get('/movies.json').success(function(data) {
+    $http.get('/moviess.json').success(function receivedMovies(data, status, headers, config) {
       data.sort(function(a,b){
         return a.title.toLowerCase() > b.title.toLowerCase();
       });
       $scope.movies = data;
+    }).error(function failedReceiveMovies(data, status, headers, config) {
+      console.error(data, status, headers, config);
+      if(status === 404){
+        window.alert('Not found');
+      } else {
+        window.alert('Unknown error');
+      }
     });
     $scope.movie = {
       title: '',
