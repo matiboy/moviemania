@@ -9,11 +9,34 @@
  */
 angular.module('moviemaniaApp')
   .controller('MainCtrl', function ($scope, $location, $http) {
-    $http.get('').success(function gitrepo(data, status, headers, config) {
-
+    $http.get('https://api.github.com/search/repositories', {
+      params: {
+        q: 'moviemania',
+        sort: 'updated',
+        order: 'desc'
+      }
+    }).success(function gitrepo(data, status, headers, config) {
+      $scope.repo = data.items[0].git_url;
     }).error(function failedGitRepo(data, status, headers, config) {
 
     });
+
+    $scope.addIssue = function() {
+      $http.post('https://api.github.com/repos/matiboy/moviemania/issues', {
+        title: $scope.issue,
+        description: 'Added through code'
+      }, {
+        headers: {
+          Authorization: 'token '
+        }
+      }).success(function(data, status) {
+        console.log(data);
+      }).error(function(data, status) {
+        window.alert('API responded with status: ' + status);
+      });
+    };
+
+
     $scope.movie = {
       title: '',
       description: '',
