@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('moviemaniaApp')
-  .controller('MovieCtrl', function ($scope, $routeParams) {
+  .controller('MovieCtrl', function ($scope, $routeParams, $http) {
     var id = parseInt($routeParams.id, 10);
     var movieList = [{
       id: 23,
