@@ -45,7 +45,22 @@ angular.module('moviemaniaApp')
       var movie = movieList[index];
       if(movie.id === id) {
         $scope.movie = movie;
-
+        $scope.loading = true;
+        $http.jsonp('http://api.duckduckgo.com', {
+          params: {
+            q: $scope.movie.searchTerms,
+            format: 'json',
+            pretty: 1,
+            callback: 'JSON_CALLBACK'
+          }
+        }).success(function(data) {
+          $scope.movie.abstract = data.AbstractText;
+          $scope.movie.abstractSource = data.AbstractSource;
+        }).error(function(){
+          console.log(arguments);
+        }).finally(function() {
+          $scope.loading = false;
+        });
       }
     }
   });
