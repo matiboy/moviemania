@@ -9,34 +9,19 @@
  */
 angular.module('moviemaniaApp')
   .controller('MainCtrl', function ($scope, $location, $http) {
-    $http.get('https://api.github.com/search/repositories', {
-      params: {
-        q: 'moviemania',
-        sort: 'updated',
-        order: 'desc'
-      }
-    }).success(function gitrepo(data, status, headers, config) {
-      $scope.repo = data.items[0].git_url;
-    }).error(function failedGitRepo(data, status, headers, config) {
-
-    });
-
-    $scope.addIssue = function() {
-      $http.post('https://api.github.com/repos/matiboy/moviemania/issues', {
-        title: $scope.issue,
-        description: 'Added through code'
-      }, {
-        headers: {
-          Authorization: 'token '
-        }
-      }).success(function(data, status) {
-        console.log(data);
-      }).error(function(data, status) {
-        window.alert('API responded with status: ' + status);
+    $http.get('/movies.json').success(function receivedMovies(data, status, headers, config) {
+      data.sort(function(a,b){
+        return a.title.toLowerCase() > b.title.toLowerCase();
       });
-    };
-
-
+      $scope.movies = data;
+    }).error(function failedReceiveMovies(data, status, headers, config) {
+      console.error(data, status, headers, config);
+      if(status === 404){
+        window.alert('Not found');
+      } else {
+        window.alert('Unknown error');
+      }
+    });
     $scope.movie = {
       title: '',
       description: '',
