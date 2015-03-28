@@ -8,19 +8,12 @@
  * Controller of the moviemaniaApp
  */
 angular.module('moviemaniaApp')
-  .controller('MainCtrl', function ($scope, $location, $http) {
-    $http.get('/movies.json').success(function receivedMovies(data, status, headers, config) {
+  .controller('MainCtrl', ['$scope', 'Movies', '$location' ,function ($scope, Movies, $location) {
+    Movies.load().then(function receivedMovies(data) {
       data.sort(function(a,b){
         return a.title.toLowerCase() > b.title.toLowerCase();
       });
       $scope.movies = data;
-    }).error(function failedReceiveMovies(data, status, headers, config) {
-      console.error(data, status, headers, config);
-      if(status === 404){
-        window.alert('Not found');
-      } else {
-        window.alert('Unknown error');
-      }
     });
     $scope.movie = {
       title: '',
@@ -43,7 +36,9 @@ angular.module('moviemaniaApp')
     };
 
     $scope.addMovie = function() {
-      $scope.movies.push(angular.copy($scope.movie));
+      var newMovie = angular.copy($scope.movie);
+      $scope.movies.push(newMovie);
+      Movies.add(newMovie);
     };
 
     $scope.checkCategorySelected = function() {
@@ -70,4 +65,4 @@ angular.module('moviemaniaApp')
       return $scope.movie.title && $scope.movie.category && $scope.movie.description;
     };
 
-  });
+  }]);
