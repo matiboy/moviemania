@@ -1,44 +1,40 @@
 [{
   "id": 0,
-  "title": "Ace Drummond",
-  "searchTerms": "ace drummond",
-  "image": "http://ia.media-imdb.com/images/M/MV5BMjEyNzg3MzcyNF5BMl5BanBnXkFtZTcwNjQ2NTQyMQ@@._V1._SY209_CR2,0,140,209_.jpg",
-  "description": "This 13 chapter serial is based on the comic strip character Ace Drummond created by Eddie Rickenbacker. Ace is a 'G-Man of the sky' working out of Washington D.C. He is sent to Mongolia to find out why a mysterious villain known only as 'The Dragon' is trying to prevent the newly formed International Airways from setting up an airport there. Ace meets Peggy Trainor (Jean Rogers) who is searching for her archaeologist father who has disappeared. Together they search for answers to the puzzles.",
+  "title": "Usual Suspects",
+  "searchTerms": "the usual suspects",
+  "image": "http://www.covershut.com/covers/The-Usual-Suspects-1995-Dutch-Front-Cover-79316.jpg",
+  "description": "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which begin when five criminals meet at a seemingly random police lineup.",
   "category": "Awesome",
-  "slug": "ace-drummond",
+  "slug": "usual-suspects",
   "cast": [
-    "Jean Rogers",
-    "Noah Beery Jr.",
-    "Guy Bates Post"
+    "McManus: Stephen Baldwin",
+    "Fenster: Benicio del Toro",
+    "Verbal: Kevin Spacey"
   ]
 },
 {
   "id": 1,
-  "title": "And Then There Were None",
-  "searchTerms": "and then there were none",
-  "image": "http://ia.media-imdb.com/images/M/MV5BMTMyMDA2ODE5M15BMl5BanBnXkFtZTcwNjg0NjIyMQ@@._V1._SY209_CR4,0,140,209_.jpg",
-  "description": "Based on a novel and subsequent stage play by Agatha Christie; ten people are invited to an isolated island, only to be killed one-by-one. Could one of them be the killer?",
+  "title": "Star Wars",
+  "searchTerms": "star wars 1977",
+  "image": "http://www.covershut.com/covers/Star-Wars-IV-A-New-Hope-FS-Front-Cover-37697.jpg",
+  "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the universe from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.",
   "category": "Epic",
-  "slug": "and-then-there-were-none",
+  "slug": "star-wars",
   "cast": [
-    "Barry Fitzgerald",
-    "Walter Huston",
-    "Louis Hayward",
-    "Roland Young"
+    "Han Solo: Harrison Ford",
+    "Luke Skywalker: Mark Hamill"
   ]
 },
 {
   "id": 2,
-  "title": "Captain Kidd",
-  "searchTerms": "captain kidd",
-  "image": "http://ia.media-imdb.com/images/M/MV5BMzMyMzk3Nzc3Nl5BMl5BanBnXkFtZTcwNzczMzU1MQ@@._V1._SY209_CR34,0,140,209_.jpg",
-  "description": "The unhistorical adventures of pirate Captain Kidd revolve around treasure and treachery.",
+  "title": "The Lego Movie",
+  "searchTerms": "the lego movie",
+  "image": "http://www.covershut.com/covers/The-LEGO-Movie-Front-Cover-88711.jpg",
+  "description": "An ordinary Lego construction worker, thought to be the prophesied \"Special\", is recruited to join a quest to stop an evil tyrant from gluing the Lego universe into eternal stasis.",
   "category": "Awesome",
-  "slug": "captain-kidd",
+  "slug": "the-lego-movie",
   "cast": [
-    "Charles Laughton",
-    "Randolph Scott",
-    "Barbara Britton",
-    "John Carradine"
+    "Emmet Brickowoski: Chris Pratt",
+    "Lucy: Elizabeth Banks"
   ]
 }]
