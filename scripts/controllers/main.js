@@ -38,7 +38,7 @@ angular.module('moviemaniaApp')
     $scope.addMovie = function() {
       var newMovie = angular.copy($scope.movie);
       $scope.movies.push(newMovie);
-      Movies.add(newMovie);
+      // Movies.add(newMovie);
     };
 
     $scope.checkCategorySelected = function() {
