@@ -11,7 +11,7 @@ angular.module('moviemaniaApp')
   .factory('Movies', function ($q, $http) {
     var key = 'movies';
     function loadMovies() {
-      return $http.get('/movies.json').then(function(resp) {
+      return $http.get('./movies.json').then(function(resp) {
         return resp.data;
       });
     }
