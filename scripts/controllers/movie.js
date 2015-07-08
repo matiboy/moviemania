@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('moviemaniaApp')
-  .controller('MovieCtrl', ['$scope', '$routeParams', 'Movies', function ($scope, $routeParams, Movies, $timeout) {
+  .controller('MovieCtrl', ['$scope', '$routeParams', 'Movies', '$timeout', function ($scope, $routeParams, Movies, $timeout) {
     var id = parseInt($routeParams.id, 10);
     Movies.get(id).then(function(movie) {
       $scope.movie = movie;
